@@ -1,10 +1,24 @@
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Ropa-sans, Roboto, sans-serif;
+    color: limegreen;
+    background-color: black;
     
   }
   
   header {
     padding: 20px 0;
+    color: limegreen;
+  }
+
+  .container {
+    background-color: black
+  }
+  .container-projects {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   
   header .row,
@@ -31,22 +45,39 @@ body {
   .jumbotron {
     display: flex;
     align-items: center;
-    background-image: url('https://images.unsplash.com/reserve/91JuTaUSKaMh2yjB1C4A_IMG_9284.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
-    color: #ffffff;
+    background-color: black;
     height: 400px;
+    
   }
+
+  .jumbotron-projects {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-size: cover;
+    background-color: transparent;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .jumbotron-projects h2 {
+    margin: 0;
+    text-align: center;
+}
   
   .jumbotron h2 {
     font-size: 60px;
     font-weight: 700;
     margin: 0;
-    color: #fff;
+    color: limegreen;
   }
   
   .jumbotron h3 {
     margin: 0 0 20px;
-    color: #fff;
+    background-color: black;
+    color: limegreen;
   }
   
   section .row img {
@@ -93,8 +124,11 @@ body {
   footer {
     font-size: 12px;
     padding: 20px 0;
+    color: limegreen;
+    background-color: black;
   }
   
+
   footer .col-sm-8 {
     display: flex;
     justify-content: flex-end;
@@ -106,5 +140,12 @@ body {
   
   nav a {
     padding: 0 20px;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1
   }
   

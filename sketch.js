@@ -12,16 +12,20 @@ let b = [];
 
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    let cnv = createCanvas(windowWidth, windowHeight);
+    cnv.parent('canvasContainer');
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+    }
     for (i = 0; i < ballCount; i++ ) {
         x[i] = width / 2;
         y[i] = height / 2;
         xSpeed[i] = random(-5, 5);
         ySpeed[i] = random(-5, 5);
         size[i] = random(10, 50);
-        r[i] = random(0, 256);
-        g[i] = random(0, 256);
-        b[i] = random(0, 256);
+       // r[i] = random(0, 256); hiding colours for now
+       // g[i] = random(0, 256);
+       // b[i] = random(0, 256);
 
     }
 
@@ -32,12 +36,12 @@ function draw() {
   for (i = 0; i < ballCount; i++) {
     x[i] += xSpeed[i];
     y[i] += ySpeed[i];
-    if (x[i] < 0 || x[i] > width) {
-        xSpeed[i] *= -1
-    };
-    if (y[i] < 0 || y[i] > height) {
-        ySpeed[i] *= -1
-    };
+   // if (x[i] < 0 || x[i] > width) {      stopping balls from hitting walls
+   //     xSpeed[i] *= -1
+   // };
+   // if (y[i] < 0 || y[i] > height) {
+   //     ySpeed[i] *= -1
+   // };
     fill(r[i], g[i], b[i]);
     noStroke();
     ellipse(x[i], y[i], size[i])
