@@ -11,7 +11,7 @@ let b = [];
 
 
 
-export function setup() {
+function setup() {
     createCanvas(windowWidth, windowHeight);
     for (i = 0; i < ballCount; i++ ) {
         x[i] = width / 2;
@@ -27,7 +27,7 @@ export function setup() {
 
 }
 
-export function draw() {
+function draw() {
   background(0, 50);
   for (i = 0; i < ballCount; i++) {
     x[i] += xSpeed[i];
