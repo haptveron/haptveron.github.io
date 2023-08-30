@@ -43,5 +43,3 @@ export function draw() {
     ellipse(x[i], y[i], size[i])
   }
 }
-
-export { setup }
