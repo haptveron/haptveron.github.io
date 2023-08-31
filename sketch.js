@@ -47,3 +47,12 @@ function draw() {
     ellipse(x[i], y[i], size[i])
   }
 }
+
+let testButton = document.getElementById('test');
+
+function clickedButton() {
+    testButton.style.backgroundColor = 'red';
+    testButton.innerHTML = 'OOO YEAH';
+};
+
+testButton.onclick = clickedButton;
