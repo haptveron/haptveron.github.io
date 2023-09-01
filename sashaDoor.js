@@ -13,6 +13,8 @@ let openDoor2;
 let openDoor3;
 let currentlyPlaying = true;
 
+let winCount = 0;
+
 let startButton = document.getElementById('start');
 
 function isClicked(door) {
@@ -30,22 +32,30 @@ function isSasha(door) {
 function gameOver(status) {
     if (status === 'win') {
         startButton.innerHTML = `Yum! Let's go for a walk`;
-    } else if 
-        (status === 'not yet') {
-            startButton.innerHTML = `Wrong door! She's facing the wrong way`;
-    } else startButton.innerHTML = `Wrong door, Sasha's barking! Try again?`;
-    currentlyPlaying = false; 
+        winCount++;
+        document.getElementById('updateWinCount').innerHTML = "You've won " + winCount + " times";
+        currentlyPlaying = false;
+    } else if (status === 'not yet') {
+            startButton.innerHTML = `She's facing the wrong way! One more try`;
+    } 
+    else {startButton.innerHTML = `Wrong door, Sasha's barking! Try again?`;
+    winCount = 0;
+    document.getElementById('updateWinCount').innerHTML = "You've won " + winCount + " times";
+    currentlyPlaying = false; }
 }
+
+
 
 function playDoor(door) {
     numClosedDoors -= 1;
 
     if (isSasha(door) === true) {
         gameOver('win')
-    } else if (isSasha(door) === false && numClosedDoors === 2) {
+    };
+    if (isSasha(door) === false && numClosedDoors === 2) {
         gameOver('not yet');
     }
-    else {
+    if (isSasha(door) === false && numClosedDoors === 1) {
         gameOver()
     };
 }

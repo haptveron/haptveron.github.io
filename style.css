@@ -174,7 +174,6 @@ body {
     animation: fadeEffect 1s;
     display: none; /* Initially, all tab contents are hidden */
     padding: 15px;
-    border: 1px solid #ddd;
     border-top: none
 }
 
