@@ -245,3 +245,19 @@ table {
     margin-bottom: 9px;
     cursor: pointer;
   }
+
+  .door-row {
+    text-align: center;
+  }
+
+  .door-frame {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .door-now {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
