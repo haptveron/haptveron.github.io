@@ -158,6 +158,8 @@ body {
     padding: 10px 20px;
   }
 
+  /* Project tabs rulesets */
+
   .tab {
     overflow: hidden;
     display: block;
@@ -191,6 +193,8 @@ body {
     border-top-right-radius: 4px;
     outline: none;
 }
+
+/* Sasha door rulesets */
 
 #sashaDoor {
   text-align: center;
@@ -255,9 +259,6 @@ table {
     height: auto;
   }
 
-  .door-now {
-    display: flex;
-    justify-content: space-between;
-  }
+ 
 
   

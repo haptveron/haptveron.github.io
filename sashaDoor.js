@@ -7,6 +7,8 @@ let buttDoorPath1 = 'https://uploads-ssl.webflow.com/5f8690e28f533367742dfc18/64
 let buttDoorPath2 = 'https://uploads-ssl.webflow.com/5f8690e28f533367742dfc18/64f17e1d617569224a14d8e7_Untitled%20design%20(22).svg';
 let closedDoorPath = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
 
+
+
 let numClosedDoors = 3;
 let openDoor1;
 let openDoor2;
