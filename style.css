@@ -1,0 +1,266 @@
+body {
+    font-family: Ropa-sans, Roboto, sans-serif;
+    color: limegreen;
+    background-color: black;
+    margin: 10px;
+    font-size: 24px;;
+    
+  }
+  
+  header {
+    padding: 20px 0;
+    color: limegreen;
+  }
+
+  .container {
+    background-color: black;
+    margin: 50px;
+    padding: 50% auto;
+  }
+  .container-projects {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  header .row,
+  footer .row {
+    display: flex;
+    align-items: center;
+  }
+  
+  h1 {
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  a {
+    padding: 0;
+    margin: 0;
+    color: limegreen;
+  }
+  
+  .jumbotron {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-color: black;
+    height: 400px;
+    
+  }
+
+  .jumbotron-projects {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-size: cover;
+    background-color: transparent;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .jumbotron-projects h2 {
+    margin: 0;
+    text-align: center;
+}
+  
+  .jumbotron h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    color: limegreen;
+  }
+  
+  .jumbotron h3 {
+    margin: 0 0 20px;
+    background-color: black;
+    color: limegreen;
+  }
+  
+  section .row img {
+    margin: 0 0 30px;
+    width: 100%;
+  }
+  
+  .col-md-6 {
+    margin: 0 0 30px;
+  }
+  
+  .btn.btn-primary {
+    border-radius: 2px;
+    border: 0px;
+    color: #fbd1d5;
+    background-color: #ffffff;
+  }
+  
+  .btn.btn-primary:hover {
+    color: #ffffff;
+    background-color: #fbd1d5;
+  }
+  
+  .btn-secondary {
+    background-color: #2a70e0;
+    color: #ffffff;
+    margin: 0 0 30px;
+  }
+  
+  .portrait {
+    width:  350px;
+    height: 300px;
+  }
+  
+  figure img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figure {
+    margin-bottom: 30px;
+  }
+  
+  footer {
+    font-size: 12px;
+    padding: 20px 0;
+    color: limegreen;
+    background-color: black;
+  }
+  
+
+  footer .col-sm-8 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  nav a {
+    padding: 0 20px;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1
+  }
+
+  button {
+    background-color: limegreen;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  /* Project tabs rulesets */
+
+  .tab {
+    overflow: hidden;
+    display: block;
+    padding-bottom: 50px;
+    bottom: 40px;
+
+  }
+  
+.tab button:hover {
+    top: 4px;
+    background-color: #2a70e0;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s;
+    display: none; /* Initially, all tab contents are hidden */
+    padding: 15px;
+    border-top: none
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tablinks {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: limegreen;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    outline: none;
+}
+
+/* Sasha door rulesets */
+
+#sashaDoor {
+  text-align: center;
+  font-size: 32px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-row {
+    margin-top: 42px;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+.instructions-title {
+    display: inline;
+    font-size: 32px;
+    color: #00ffff;
+  }
+
+
+  .instructions-number {
+    padding-right: 25px;
+    font-size: 36px;
+  }
+  
+  .instructions-text {
+    padding: 10px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .instructions-row {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 400px;
+  }
+
+  .start-row {
+    margin: auto;
+    margin-top: 20px;
+    width: 350px;
+    height: 60px;
+    background-color: limegreen;
+    padding-top: 18px;
+    font-size: 18px;
+    text-align: center;
+    color: #010165;
+    margin-bottom: 9px;
+    cursor: pointer;
+  }
+
+  .door-row {
+    text-align: center;
+  }
+
+  .door-frame {
+    max-width: 100px;
+    height: auto;
+  }
+
+ 
+
+  

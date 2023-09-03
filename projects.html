@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Personal Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preload" as="image" href="https://uploads-ssl.webflow.com/5f8690e28f533367742dfc18/64f17e1d73fc956b92b004a8_Untitled%20design%20(23).svg">
+    <link rel="preload" as="image" href="https://uploads-ssl.webflow.com/5f8690e28f533367742dfc18/64f17e1d617569224a14d8e7_Untitled%20design%20(22).svg">
+    <link rel="preload" as="image" href="https://uploads-ssl.webflow.com/5f8690e28f533367742dfc18/64f17e1d617569224a14d8e7_Untitled%20design%20(22).svg">
+    <script src="project-tabs.js"></script>
+  </head>
+  <body>
+<header class='container'>
+    <div class='row'>
+       <h1 class='col-sm-6'> Tim Veron </h1>
+       <nav class='col-sm-6 text-right' >
+        <a href="index.html">Home</a>
+        
+        <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+    <div class="tab">
+      <button class="tablinks" onclick="openProject(event, 'sashaDoor')">Sasha door</button>
+      <button class="tablinks" onclick="openProject(event, 'Other')">Other</button>
+    </div>
+
+    <!-- Sasha door rulesets --> 
+
+<section id="sashaDoor" class="tabcontent">
+      <div>
+        <h3>Welcome to the Sasha Door game!</h3>
+        <div class="title-row">
+          <img src="https://content.codecademy.com/projects/chore-door/images/star.svg">
+          <p class="instructions-title">Instructions</p>
+          <img src="https://content.codecademy.com/projects/chore-door/images/star.svg">
+        </div>
+      </div>
+      
+        <table class="instructions-row">
+          <tr>
+            <td class="instructions-number">1</td>
+            <td class="instructions-text">Hiding behind one of these doors is Sasha</td>
+          </tr>
+          <tr>
+            <td class="instructions-number">2</td>
+            <td class="instructions-text">Your mission is to take Sasha for a walk</td>
+          </tr>
+          <tr>
+            <td class="instructions-number">3</td>
+            <td class="instructions-text">First, you must guess which door Sasha is behind</td>
+          </tr>
+          <tr>
+            <td class="instructions-number">4</td>
+            <td class="instructions-text">Sasha loves walks. See how many times you can take Sasha for a walk!</td>
+          </tr>
+        </table>
+      <div class="door-now">
+        <img id="door1" class="door-frame" src="https://content.codecademy.com/projects/chore-door/images/closed_door.svg">
+        <img id="door2" class="door-frame" src="https://content.codecademy.com/projects/chore-door/images/closed_door.svg">
+        <img id="door3" class="door-frame" src="https://content.codecademy.com/projects/chore-door/images/closed_door.svg">
+      </div>
+
+      <div id="start" class="start-row">Woof woof!</div>
+      <p id="updateWinCount"></p>
+      <script type="text/javascript" src="sashaDoor.js"></script>
+    </section>
+      
+
+
+    <section class='jumbotron-projects'>
+      <div id='Other' class="tabcontent">
+       
+          <h2> Welcome to my other projects</h2>
+          
+        </div>
+      </section>
+     
+    
+<div id="canvasContainer"></div>
+
+     <footer class='container'>
+          <p class='col-sm-4'> &copy; Tim Veron </p>
+          <div class='col-sm-2'><a href="https://www.linkedin.com/in/tim-veron/" target='_blank' rel='noopener'>LinkedIn</a></div>
+          <div class='col-sm-2'><a href="https://twitter.com/tim_veron" target='_blank' rel='noopener'>Twitter</a></div>
+          
+        </footer>
+         
+  </body>
+</html>
