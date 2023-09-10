@@ -13,13 +13,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
-const config_1 = __importDefault(require("./config"));
+const githubToken = process.env.TOKEN_GITHUB;
+if (!githubToken) {
+    console.error('TOKEN_GITHUB is not set');
+    process.exit(1);
+}
 function getCommitCount() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const response = yield axios_1.default.get('https://api.github.com/repos/haptveron/haptveron.github.io/commits', {
                 headers: {
-                    'Authorization': config_1.default.githubToken,
+                    'Authorization': `token ${githubToken}`,
                     'Accept': 'application/vnd.github.v3+json'
                 }
             });
