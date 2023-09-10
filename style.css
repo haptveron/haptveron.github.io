@@ -14,7 +14,7 @@ body {
 
   .container {
     background-color: black;
-    margin: 50px;
+    
     padding: 50% auto;
   }
   .container-projects {
@@ -159,6 +159,23 @@ body {
     border: none;
     padding: 10px 20px;
   }
+
+  .list-group-item {
+    padding: 10px 15px;
+    margin-bottom: 10px; 
+    background-color: black;
+    border-color: limegreen;
+  }
+
+  .badge {
+    color: blue;
+    background-color: red;
+
+  }
+
+  .list-item-text {
+    margin-right: 20px;
+}
 
   /* Project tabs rulesets */
 
