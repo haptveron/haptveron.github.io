@@ -19,7 +19,7 @@ async function displayCommitCount() {
   const commitCount = await getCommitCount();
   const commitCountElement = document.getElementById('commit-count');
   if (commitCount !== null && commitCountElement) {
-    commitCountElement.textContent = `Commit Count: ${commitCount}`;
+    commitCountElement.textContent = `${commitCount}`;
   } else if (commitCountElement) {
     commitCountElement.textContent = 'Error fetching commit count';
   }
