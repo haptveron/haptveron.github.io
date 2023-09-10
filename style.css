@@ -9,6 +9,7 @@ body {
   
   header {
     padding: 20px 0;
+    padding-bottom: 20px;
     color: limegreen;
   }
 
@@ -165,6 +166,11 @@ body {
     margin-bottom: 10px; 
     background-color: black;
     border-color: limegreen;
+  }
+
+  .list-group-item-projects {
+    padding: 10px 15px;
+    margin-bottom: 10px; 
   }
 
   .badge {
