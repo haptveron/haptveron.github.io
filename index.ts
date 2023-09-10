@@ -1,10 +1,18 @@
 import axios from 'axios';
 
+const githubToken = process.env.GITHUB_TOKEN;
+
+if (!githubToken) {
+  console.error('TOKEN_GITHUB is not set');
+  process.exit(1);
+}
+
+
 async function getCommitCount(): Promise<number | null> {
   try {
-    const response = await axios.get('https://api.github.com/repos/USERNAME/REPO_NAME/commits', {
+    const response = await axios.get('https://api.github.com/repos/haptveron/haptveron.github.io/commits', {
       headers: {
-        'Authorization': 'token YOUR_GITHUB_TOKEN',
+        'Authorization': githubToken,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
@@ -13,13 +21,20 @@ async function getCommitCount(): Promise<number | null> {
     console.error('Error fetching commit data:', error);
     return null;
   }
+  
 }
 
 async function displayCommitCount() {
-  const commitCount = await getCommitCount();
-  if (commitCount !== null) {
-    console.log(`Commit Count: ${commitCount}`);
+    const commitCount = await getCommitCount();
+    const commitCountElement = document.getElementById('commit-count');
+    if (commitCount !== null && commitCountElement) {
+      commitCountElement.textContent = `My commit count: ${commitCount}`;
+    } else if (commitCountElement) {
+      commitCountElement.textContent = 'Error fetching commit count';
+    }
   }
-}
+  
 
 displayCommitCount();
+
+export default displayCommitCount;

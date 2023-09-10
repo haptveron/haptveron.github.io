@@ -13,12 +13,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
+const config_1 = __importDefault(require("./config"));
 function getCommitCount() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield axios_1.default.get('https://api.github.com/repos/USERNAME/REPO_NAME/commits', {
+            const response = yield axios_1.default.get('https://api.github.com/repos/haptveron/haptveron.github.io/commits', {
                 headers: {
-                    'Authorization': 'token YOUR_GITHUB_TOKEN',
+                    'Authorization': config_1.default.githubToken,
                     'Accept': 'application/vnd.github.v3+json'
                 }
             });
@@ -33,9 +34,14 @@ function getCommitCount() {
 function displayCommitCount() {
     return __awaiter(this, void 0, void 0, function* () {
         const commitCount = yield getCommitCount();
-        if (commitCount !== null) {
-            console.log(`Commit Count: ${commitCount}`);
+        const commitCountElement = document.getElementById('commit-count');
+        if (commitCount !== null && commitCountElement) {
+            commitCountElement.textContent = `My commit count: ${commitCount}`;
+        }
+        else if (commitCountElement) {
+            commitCountElement.textContent = 'Error fetching commit count';
         }
     });
 }
 displayCommitCount();
+exports.default = displayCommitCount;
