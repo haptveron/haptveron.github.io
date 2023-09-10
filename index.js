@@ -7,7 +7,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import axios from 'axios';
 const githubToken = process.env.TOKEN_GITHUB;
 if (!githubToken) {
     console.error('TOKEN_GITHUB is not set');

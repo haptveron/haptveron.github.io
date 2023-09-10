@@ -1,4 +1,5 @@
-import axios from 'axios';
+
+declare var axios: any;
 
 const githubToken = process.env.TOKEN_GITHUB;
 
