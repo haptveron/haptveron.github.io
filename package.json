@@ -2,6 +2,7 @@
   "name": "haptveron.github.io",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "project-tabs.js",
   "scripts": {
     "build": "tsc",
