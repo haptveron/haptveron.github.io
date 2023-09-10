@@ -31,15 +31,22 @@ function getCommitCount() {
 }
 function displayCommitCount() {
     return __awaiter(this, void 0, void 0, function* () {
-        const commitCount = yield getCommitCount();
-        const commitCountElement = document.getElementById('commit-count');
-        if (commitCount !== null && commitCountElement) {
-            commitCountElement.textContent = `My commit count: ${commitCount}`;
+        try {
+            const response = yield fetch('http://localhost:3000/commit-count');
+            const data = yield response.json();
+            const commitCountElement = document.getElementById('commit-count');
+            if (data.commitCount !== null && commitCountElement) {
+                commitCountElement.textContent = `Commit Count: ${data.commitCount}`;
+            }
+            else if (commitCountElement) {
+                commitCountElement.textContent = 'Error fetching commit count';
+            }
         }
-        else if (commitCountElement) {
-            commitCountElement.textContent = 'Error fetching commit count';
+        catch (error) {
+            console.error('Error fetching commit data:', error);
         }
     });
 }
+displayCommitCount();
 displayCommitCount();
 export default displayCommitCount;

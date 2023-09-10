@@ -26,14 +26,21 @@ async function getCommitCount(): Promise<number | null> {
 }
 
 async function displayCommitCount() {
-    const commitCount = await getCommitCount();
-    const commitCountElement = document.getElementById('commit-count');
-    if (commitCount !== null && commitCountElement) {
-      commitCountElement.textContent = `My commit count: ${commitCount}`;
-    } else if (commitCountElement) {
-      commitCountElement.textContent = 'Error fetching commit count';
+    try {
+      const response = await fetch('http://localhost:3000/commit-count');
+      const data = await response.json();
+      const commitCountElement = document.getElementById('commit-count');
+      if (data.commitCount !== null && commitCountElement) {
+        commitCountElement.textContent = `Commit Count: ${data.commitCount}`;
+      } else if (commitCountElement) {
+        commitCountElement.textContent = 'Error fetching commit count';
+      }
+    } catch (error) {
+      console.error('Error fetching commit data:', error);
     }
   }
+  
+  displayCommitCount();
   
 
 displayCommitCount();
