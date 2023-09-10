@@ -1,0 +1,26 @@
+name: Update Commit Count
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # This will run the action every day at midnight
+
+jobs:
+  update_commit_count:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install axios
+
+    - name: Update commit count
+      run: node .github/scripts/update_commit_count.js
+      env:
+        TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
