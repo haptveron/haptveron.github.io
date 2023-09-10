@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const githubToken = process.env.GITHUB_TOKEN;
+const githubToken = process.env.TOKEN_GITHUB;
 
 if (!githubToken) {
   console.error('TOKEN_GITHUB is not set');
@@ -12,7 +12,7 @@ async function getCommitCount(): Promise<number | null> {
   try {
     const response = await axios.get('https://api.github.com/repos/haptveron/haptveron.github.io/commits', {
       headers: {
-        'Authorization': githubToken,
+        'Authorization': `token ${githubToken}`,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
