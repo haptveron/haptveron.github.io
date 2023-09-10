@@ -200,7 +200,7 @@ body {
 
 .tabcontent {
     animation: fadeEffect 1s;
-    display: none; /* Initially, all tab contents are hidden */
+    /* Initially, all tab contents are hidden */
     padding: 15px;
     border-top: none
 }
@@ -253,12 +253,15 @@ table {
     padding: 10px;
     font-size: 24px;
     text-align: left;
+    word-wrap: break-word;
   }
 
   .instructions-row {
     margin: 0 auto;
     margin-bottom: 50px;
-    width: 400px;
+    width: 900px;
+    max-width: 900px;
+    width: 100%; 
   }
 
   .start-row {
