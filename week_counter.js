@@ -1,5 +1,5 @@
 
-const startDate = new Date(2023, 8, 19); 
+const startDate = new Date(2023, 7, 19); 
 const currentDate = new Date();
 const diffTime = Math.abs(currentDate - startDate);
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
